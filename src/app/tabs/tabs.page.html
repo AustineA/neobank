@@ -1,20 +1,31 @@
-<ion-tabs>
-
+<ion-tabs (ionTabsDidChange)="setCurrentTab($event)">
   <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="tab1">
-      <ion-icon name="triangle"></ion-icon>
-      <ion-label>Tab 1</ion-label>
+    <ion-tab-button tab="home">
+      <ion-icon
+        [color]="currentTab == 'home' ? 'bank-green' : 'bank-gray'"
+        [name]="currentTab == 'home' ? 'home' : 'home-outline'"
+      ></ion-icon>
     </ion-tab-button>
 
-    <ion-tab-button tab="tab2">
-      <ion-icon name="ellipse"></ion-icon>
-      <ion-label>Tab 2</ion-label>
+    <ion-tab-button tab="card">
+      <ion-icon
+        [color]="currentTab == 'card' ? 'bank-green' : 'bank-gray'"
+        [name]="currentTab == 'card' ? 'card' : 'card-outline'"
+      ></ion-icon>
     </ion-tab-button>
 
-    <ion-tab-button tab="tab3">
-      <ion-icon name="square"></ion-icon>
-      <ion-label>Tab 3</ion-label>
+    <ion-tab-button tab="transaction">
+      <ion-icon
+        [color]="currentTab == 'transaction' ? 'bank-green' : 'bank-gray'"
+        [name]="currentTab == 'transaction' ? 'pie-chart' : 'pie-chart-outline'"
+      ></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="setting">
+      <ion-icon
+        [color]="currentTab == 'setting' ? 'bank-green' : 'bank-gray'"
+        [name]="currentTab == 'setting' ? 'settings' : 'settings-outline'"
+      ></ion-icon>
     </ion-tab-button>
   </ion-tab-bar>
-
 </ion-tabs>
