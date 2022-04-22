@@ -1,7 +1,17 @@
 <ion-header class="ion-no-border">
-  <ion-toolbar>
-    <ion-title>home</ion-title>
+  <ion-toolbar color="bank-green" mode="md">
+    <div class="ion-padding-start welcome-header">
+      <span>Welcome</span>
+      <ion-title class="ion-no-padding">Kal-el A.</ion-title>
+    </div>
+
+    <div slot="end" mode="ios" class="ion-padding-end avatar">
+      <img src="../../../assets/image/avatar-sm.jpg" />
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content> </ion-content>
+<ion-content [fullscreen]="true">
+  <div class="accounts"></div>
+  <!-- <div class="bottom-list"></div> -->
+</ion-content>
