@@ -25,6 +25,27 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+@import "~swiper/scss";
+@import "~swiper/scss/pagination";
+@import "~swiper/scss/autoplay";
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #fcfcfc;
+  width: 40px;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.33);
+  opacity: 1;
+}
+
+// .swiper-pagination {
+//   text-align: left;
+//   padding-left: 20px;
+// }
+
 ion-tab-bar {
   position: relative;
   width: 90%;
@@ -32,8 +53,6 @@ ion-tab-bar {
   left: 50%;
   border-radius: 30px;
   padding-bottom: 0;
-  // --background: transparent;
-  // backdrop-filter: blur(80px);
   border: 1px solid rgba(2, 52, 54, 0.08);
   height: 80px;
   overflow: hidden;

@@ -12,6 +12,26 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="accounts"></div>
+  <section class="accounts">
+    <div class="neo-swiper-holder">
+      <swiper
+        [config]="config"
+        (slideChange)="onSlideChange($event)"
+        class="neo-slider"
+      >
+        <ng-template swiperSlide *ngFor="let slide of slides">
+          <div class="account-card">
+            <div class="account-card_inner">
+              <span class="account-title">{{slide.title}}</span>
+              <p class="account-balance">
+                {{format(slide.balance, 2, slide.currency)}}
+              </p>
+              <span class="account-number">{{slide.account}}</span>
+            </div>
+          </div>
+        </ng-template>
+      </swiper>
+    </div>
+  </section>
   <!-- <div class="bottom-list"></div> -->
 </ion-content>
