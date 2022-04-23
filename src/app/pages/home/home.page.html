@@ -32,6 +32,19 @@
         </ng-template>
       </swiper>
     </div>
+    <div class="account-actions">
+      <div
+        *ngFor="let action of accountActions; let i = index"
+        class="button-holder"
+      >
+        <ion-button mode="ios" [color]="action.color" (click)="setIndex(i)">
+          <ion-icon [name]="action?.icon"></ion-icon>
+        </ion-button>
+        <ion-label> {{action.label}} </ion-label>
+      </div>
+    </div>
   </section>
+
+  <section></section>
   <!-- <div class="bottom-list"></div> -->
 </ion-content>

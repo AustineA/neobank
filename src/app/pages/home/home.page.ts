@@ -34,6 +34,24 @@ export class HomePage implements OnInit {
     },
   ];
 
+  accountActions = [
+    {
+      icon: 'paper-plane',
+      color: 'action-cyan',
+      label: 'send',
+    },
+    {
+      icon: 'add-circle',
+      color: 'action-yellow',
+      label: 'top-up',
+    },
+    {
+      icon: 'newspaper',
+      color: 'action-white',
+      label: 'bills',
+    },
+  ];
+
   constructor() {}
 
   ngOnInit() {
@@ -42,6 +60,10 @@ export class HomePage implements OnInit {
 
   onSlideChange([Swiper]) {
     console.log('slide change', Swiper);
+  }
+
+  setIndex(index) {
+    console.log('set index', index);
   }
 
   format(value, n = 0, currency = '$') {
