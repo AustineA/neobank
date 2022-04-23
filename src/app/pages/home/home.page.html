@@ -24,7 +24,7 @@
             <div class="account-card_inner">
               <span class="account-title">{{slide.title}}</span>
               <p class="account-balance">
-                {{format(slide.balance, 2, slide.currency)}}
+                {{format(slide.balance, slide.currency)}}
               </p>
               <span class="account-number">{{slide.account}}</span>
             </div>
@@ -45,6 +45,33 @@
     </div>
   </section>
 
-  <section></section>
+  <section class="transactions">
+    <ion-label class="list-title"> Transactions </ion-label>
+
+    <ion-list lines="full">
+      <ion-item *ngFor="let item of transactions">
+        <div slot="start" class="transaction-meta">
+          <div class="transaction-type">
+            <img
+              [src]="item.type == 'credit'? '../../../assets/arrow_up.svg' : '../../../assets/arrow_down.svg'"
+            />
+          </div>
+          <div>
+            <ion-label class="transaction-title"> {{item.title}} </ion-label>
+            <span class="transaction-date"
+              >{{item.date | date: 'MMM d, y'}}</span
+            >
+          </div>
+        </div>
+
+        <div class="transaction-amount" slot="end">
+          <span
+            >{{item.type == 'credit'? "" : "-"}}{{format(item?.amount,
+            item.currency)}}
+          </span>
+        </div>
+      </ion-item>
+    </ion-list>
+  </section>
   <!-- <div class="bottom-list"></div> -->
 </ion-content>

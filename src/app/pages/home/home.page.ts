@@ -18,19 +18,19 @@ export class HomePage implements OnInit {
       title: 'Total Balance',
       balance: 420.69,
       account: '50901293853',
-      currency: '$',
+      currency: 'USD',
     },
     {
       title: 'Total Balance',
       balance: 120.69,
       account: '50901293853',
-      currency: '£',
+      currency: 'EUR',
     },
     {
       title: 'Total Balance',
       balance: 64.2,
       account: '50901293853',
-      currency: '€',
+      currency: 'GBP',
     },
   ];
 
@@ -52,6 +52,50 @@ export class HomePage implements OnInit {
     },
   ];
 
+  transactions = [
+    {
+      title: 'Akolisa',
+      date: '4 Apr. 2022',
+      amount: 26.0,
+      type: 'credit',
+      currency: 'USD',
+    },
+    {
+      title: 'Simon G.',
+      date: '3 Apr. 2022',
+      amount: 56.3,
+      type: 'credit',
+      currency: 'USD',
+    },
+    {
+      title: 'Austine A.',
+      date: '3 Apr. 2022',
+      amount: 16.0,
+      type: 'credit',
+      currency: 'USD',
+    },
+    {
+      title: 'PaperCloud',
+      date: '4 Apr. 2022',
+      amount: 4.99,
+      type: 'debit',
+      currency: 'USD',
+    },
+    {
+      title: 'Akolisa',
+      date: '4 Apr. 2022',
+      amount: 26.0,
+      type: 'credit',
+      currency: 'USD',
+    },
+    {
+      title: 'Akolisa',
+      date: '4 Apr. 2022',
+      amount: 26.0,
+      type: 'credit',
+      currency: 'USD',
+    },
+  ];
   constructor() {}
 
   ngOnInit() {
@@ -66,12 +110,13 @@ export class HomePage implements OnInit {
     console.log('set index', index);
   }
 
-  format(value, n = 0, currency = '$') {
-    return (
-      `${currency}` +
-      new Intl.NumberFormat('ng-NG', {
-        maximumFractionDigits: n,
-      }).format(value)
-    );
+  format(value, currency = 'USD') {
+    return new Intl.NumberFormat('en-US', <any>{
+      // maximumFractionDigits: n,
+      style: 'currency',
+      currency: currency,
+      currencySign: 'accounting',
+      signDisplay: 'auto',
+    }).format(value);
   }
 }
