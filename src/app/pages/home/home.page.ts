@@ -9,9 +9,6 @@ import SwiperCore, { Pagination, SwiperOptions, Autoplay } from 'swiper';
 export class HomePage implements OnInit {
   config: SwiperOptions = {
     pagination: { clickable: true },
-    // autoplay: {
-    //   delay: 5000,
-    // },
   };
   slides = [
     {
@@ -76,24 +73,24 @@ export class HomePage implements OnInit {
     },
     {
       title: 'PaperCloud',
-      date: '4 Apr. 2022',
+      date: '1 Apr. 2022',
       amount: 4.99,
       type: 'debit',
       currency: 'USD',
     },
     {
-      title: 'Akolisa',
-      date: '4 Apr. 2022',
+      title: 'ReWork',
+      date: '28 Mar. 2022',
       amount: 26.0,
-      type: 'credit',
-      currency: 'USD',
+      type: 'debit',
+      currency: 'EUR',
     },
     {
-      title: 'Akolisa',
-      date: '4 Apr. 2022',
-      amount: 26.0,
+      title: 'Myranda',
+      date: '25 Mar. 2022',
+      amount: 10.99,
       type: 'credit',
-      currency: 'USD',
+      currency: 'GBP',
     },
   ];
   constructor() {}
@@ -106,13 +103,12 @@ export class HomePage implements OnInit {
     console.log('slide change', Swiper);
   }
 
-  setIndex(index) {
-    console.log('set index', index);
+  handleAction({ label }) {
+    console.log('You clicked on:', label);
   }
 
   format(value, currency = 'USD') {
     return new Intl.NumberFormat('en-US', <any>{
-      // maximumFractionDigits: n,
       style: 'currency',
       currency: currency,
       currencySign: 'accounting',

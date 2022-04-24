@@ -2,7 +2,7 @@
   <ion-toolbar color="bank-green" mode="md">
     <div class="ion-padding-start welcome-header">
       <span>Welcome</span>
-      <ion-title class="ion-no-padding">Kal-el A.</ion-title>
+      <ion-title class="ion-no-padding">Kal-El A.</ion-title>
     </div>
 
     <div slot="end" mode="ios" class="ion-padding-end avatar">
@@ -37,7 +37,11 @@
         *ngFor="let action of accountActions; let i = index"
         class="button-holder"
       >
-        <ion-button mode="ios" [color]="action.color" (click)="setIndex(i)">
+        <ion-button
+          mode="ios"
+          [color]="action.color"
+          (click)="handleAction(action)"
+        >
           <ion-icon [name]="action?.icon"></ion-icon>
         </ion-button>
         <ion-label> {{action.label}} </ion-label>

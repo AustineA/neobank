@@ -54,19 +54,19 @@ ion-toolbar {
 .account-card {
   color: var(--white);
   text-align: center;
-  height: 150px;
+  height: 9.375rem;
 }
 
 .neo-swiper-holder {
   display: flex;
   padding: 1.5rem;
-  height: 212px;
+  height: 13.23rem;
   background: linear-gradient(
     120.67deg,
     #03b5aa 17.45%,
     rgba(162, 167, 127, 0.09) 105.58%
   );
-  border-radius: 40px;
+  border-radius: 2.5rem;
   margin-right: 1rem;
   margin-left: 1rem;
   position: relative;
@@ -79,7 +79,7 @@ ion-toolbar {
     right: 1px;
     bottom: 1px;
     background: #194648;
-    border-radius: 40px;
+    border-radius: 2.5rem;
     z-index: 0;
     border: 2px solid transparent;
   }
@@ -102,6 +102,10 @@ ion-toolbar {
     height: 3.3rem;
   }
 
+  ion-label {
+    text-transform: capitalize;
+  }
+
   .button-holder {
     display: flex;
     flex-direction: column;
@@ -116,7 +120,7 @@ ion-toolbar {
   margin-top: -4rem;
   z-index: 1;
   background: var(--bg-hi);
-  border-radius: 50px 50px 0 0;
+  border-radius: 3.12rem 3.12rem 0 0;
   padding-top: 2rem;
   padding-bottom: 4rem;
   padding-left: 1.5rem;
