@@ -1,5 +1,5 @@
 <ion-tabs (ionTabsDidChange)="setCurrentTab($event)">
-  <ion-tab-bar slot="bottom">
+  <ion-tab-bar slot="bottom" mode="ios">
     <ion-tab-button tab="home">
       <ion-icon
         [color]="currentTab == 'home' ? 'bank-green' : 'bank-gray'"
