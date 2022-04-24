@@ -41,6 +41,19 @@
   opacity: 1;
 }
 
+.neo-slider {
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 0;
+  }
+}
+
+.card-slider {
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 1.5rem;
+  }
+}
 // .swiper-pagination {
 //   text-align: left;
 //   padding-left: 20px;

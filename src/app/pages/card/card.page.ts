@@ -22,6 +22,11 @@ export class CardPage implements OnInit {
       name: 'Kal-El Amah',
       expireAt: '01/25',
     },
+    {
+      number: '2223003122003222',
+      name: 'Kal-El Amah',
+      expireAt: '07/30',
+    },
   ];
   constructor() {}
 
