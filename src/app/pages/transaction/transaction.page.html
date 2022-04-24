@@ -2,7 +2,7 @@
   <ion-toolbar mode="ios">
     <ion-title class="ion-no-padding">Transaction</ion-title>
   </ion-toolbar>
-  <ion-toolbar>
+  <ion-toolbar mode="ios">
     <ion-segment (ionChange)="handleChange($event)" value="credit" mode="ios">
       <ion-segment-button value="credit">
         <ion-label>In-flow</ion-label>
@@ -16,7 +16,7 @@
 
 <ion-content>
   <section class="transactions">
-    <ion-list lines="full">
+    <ion-list lines="full" mode="ios">
       <ion-item *ngFor="let item of transactions">
         <div slot="start" class="transaction-meta">
           <div class="transaction-type">

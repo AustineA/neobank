@@ -1,3 +1,7 @@
+ion-title {
+  color: var(--lo-green);
+}
+
 .avatar {
   display: block;
   text-align: center;
@@ -25,7 +29,7 @@
   z-index: 1;
   background: var(--bg-hi);
   padding-top: 2rem;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 
